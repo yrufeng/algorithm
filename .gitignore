@@ -1,16 +1,13 @@
-/target
-/.settings
-.classpath
-.project
-.springBeans
-/.idea
-*.iml
-.mymetadata
-*.eml
-/src/main/resources/dbconfig.properties
-/src/main/resources/jdbc.properties
-/src/main/resources/redis.properties
-/src/main/resources/jeecg/jeecg_database.properties
+*.class
 
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
 
-.externalToolBuilders
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
