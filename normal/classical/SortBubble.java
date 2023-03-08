@@ -22,12 +22,17 @@ public class SortBubble {
     public static void bubbleSort(int[] arr) {
         if (arr.length > 1) {
             for (int i = 0; i < arr.length -1; i ++) {
+                boolean noSwap = true;
                 for (int j = i + 1; j < arr.length; j ++) {
                     if (arr[i] > arr[j]) {
                         int tem = arr[i];
                         arr[i] = arr[j];
                         arr[j] = tem;
+                        noSwap = false;
                     }
+                }
+                if (noSwap) {
+                    break;
                 }
             }
         }
