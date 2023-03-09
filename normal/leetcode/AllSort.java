@@ -2,13 +2,16 @@ package leetcode;
 
 import java.util.Arrays;
 
+/**
+ * https://leetcode.cn/problems/permutations/solution/quan-pai-lie-by-leetcode-solution-2/
+ */
 public class AllSort {
 
     private static int totalNum = 0;
 
     public static void main(String[] args) {
-        //int[] arr = {1, 2, 3};
-        int[] arr = {1, 2, 2};
+        int[] arr = {1, 2, 3};
+        //int[] arr = {2, 3, 6, 7};
 
         allSort(arr, arr.length, 0);
 

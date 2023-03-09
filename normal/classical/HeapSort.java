@@ -20,7 +20,7 @@ public class HeapSort {
         //
         buildMinHeap(arr, len);
 
-        for (int i = len-1; i > 0; i --) {
+        for (int i = len-1; i >= 0; i --) {
             int tmp = arr[0];
             arr[0] = arr[i];
             arr[i] = tmp;
@@ -35,6 +35,7 @@ public class HeapSort {
         for (int i = lastP; i <= 0; i --) {
             minHeapFixDown(arr, len, i);
         }
+        System.out.println("建堆完成：" + Arrays.toString(arr));
     }
 
     private static void minHeapFixDown(int[] arr, int len, int idx) {
