@@ -4,13 +4,16 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * 全排列：元素不重复版
+ */
 public class AllSort2 {
 
     private static List<List<Integer>> res = new LinkedList<>();
     private static Integer totalNum = 0;
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 2};
+        int[] arr = {3, 1, 2};
         //int[] arr = {2, 3, 6, 7};
 
         permute(arr);
@@ -34,14 +37,11 @@ public class AllSort2 {
         }
 
         for(int i = 0; i < arr.length; i ++) {
-//            if (track.contains(arr[i])) {
-//                continue;
-//            }
-
-            if (i > 0 && arr[i - 1] == arr[i]) {
+            if (track.contains(arr[i])) {
                 continue;
             }
 
+            // add <=> addLast
             track.add(arr[i]);
             backtrace(arr, track);
             track.removeLast();

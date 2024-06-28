@@ -1,6 +1,6 @@
 package leetcode;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -16,6 +16,16 @@ public class SubSets {
         int[] arr = {1, 2, 3};
 
         System.out.println(subsets(arr));
+        List<Character> test = new LinkedList<>();
+        test.add('a');
+        test.add('b');
+        char[] chars = new char[test.size()];
+        //int i = 0;
+        for (int i = 0; i < test.size(); i ++) {
+            chars[i] = test.get(i);
+        }
+        String str = String.valueOf(chars);
+        Character[] t1 = new Character[10];
     }
 
     private static List<List<Integer>> subsets(int[] arr) {

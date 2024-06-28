@@ -11,7 +11,7 @@ public class LegalBraceNum {
 
     public static void main(String[] args) {
         LegalBraceNum solution = new LegalBraceNum();
-        System.out.println(solution.generateParenthesis(2));
+        System.out.println(solution.generateParenthesis(4));
     }
 
     public List<String> generateParenthesis(int n) {

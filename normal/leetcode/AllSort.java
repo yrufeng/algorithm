@@ -1,8 +1,11 @@
 package leetcode;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
+ * 全排列：元素不重合版本
  * https://leetcode.cn/problems/permutations/solution/quan-pai-lie-by-leetcode-solution-2/
  */
 public class AllSort {
@@ -10,7 +13,7 @@ public class AllSort {
     private static int totalNum = 0;
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3};
+        int[] arr = {1, 2, 3, 3};
         //int[] arr = {2, 3, 6, 7};
 
         allSort(arr, arr.length, 0);
@@ -26,17 +29,21 @@ public class AllSort {
 
         for (int i = index; i < length; i ++) {
             // 交换 下标 i && index
-            int temp = arr[i];
-            arr[i] = arr[index];
-            arr[index] = temp;
+            if (i != index) {
+                int temp = arr[i];
+                arr[i] = arr[index];
+                arr[index] = temp;
+            }
 
             // 递归方式对剩下元素进行全排列
             allSort(arr, length, index+1);
 
             // 交换回 下标 i && index
-            int temp2 = arr[i];
-            arr[i] = arr[index];
-            arr[index] = temp2;
+            if (i != index) {
+                int temp2 = arr[i];
+                arr[i] = arr[index];
+                arr[index] = temp2;
+            }
 
         }
     }

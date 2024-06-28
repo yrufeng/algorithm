@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
+ * 全排列：元素可重复版
  * https://leetcode.cn/problems/permutations-ii/solution/quan-pai-lie-ii-by-leetcode-solution/
  */
 
@@ -18,7 +19,7 @@ public class AllSortWithRepeat {
     private static boolean[] vis;
 
     public static void main(String[] args) {
-        int[] arr = {2, 1, 2};
+        int[] arr = {1, 2, 2};
         //int[] arr = {2, 3, 6, 7};
 
         Arrays.sort(arr);
@@ -51,7 +52,6 @@ public class AllSortWithRepeat {
             backtrace(arr, idx + 1);
             vis[i] = false;
             track.remove(idx);
-            //vis[idx] = false;
         }
     }
 }
